@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<title></title>
+<style type="text/css" class="module-css">
+*{margin:0;padding:0;}
+body{font-size:12px;}
+.box{margin: 30px;}
+.box p{margin-bottom: 15px;}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+	<p>
+		<input type="text" id="content-k">
+		<input type="text" id="content-v">
+		<button class="set" onclick="storage.set(document.getElementById('content-k').value, document.getElementById('content-v').value)">设置</button>
+		<button class="get" onclick="alert(storage.get(document.getElementById('content-k').value))">读取</button>
+		<button class="remove" onclick="storage.remove(document.getElementById('content-k').value)">删除</button>
+	</p>
+	<p>
+		<input type="text" id="content2-k">
+		<input type="text" id="content2-v">
+		<button class="set" onclick="storage.set(document.getElementById('content2-k').value, document.getElementById('content2-v').value, 10)">设置</button>
+		<button class="get" onclick="alert(storage.get(document.getElementById('content2-k').value))">读取</button>
+		<button class="remove" onclick="storage.remove(document.getElementById('content2-k').value)">删除</button>
+	</p>
+</div>
+
+<div id="result" style="padding:30px;" onclick=r()></div>
+
+</body>
+</html>
+
+<script src="js/storage.js"></script>
+
