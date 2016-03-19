@@ -1,8 +1,8 @@
 ;(function(){
 
-	var storage = {
-		set: function(name, value, iDay) {
-			var localStorage = window.localStorage;
+    var storage = {
+        set: function(name, value, iDay) {
+            var localStorage = window.localStorage;
             if(localStorage){
                 if(typeof name === 'object'){
                     for(var i in name){
@@ -12,7 +12,7 @@
                     localStorage[name] = value;
                 }
             }else{
-            	var oDate = new Date();
+                var oDate = new Date();
                     oDate.setDate(oDate.getDate() + iDay || 10*365);
                 if(typeof name === 'object'){
                     for(var i in name){
@@ -22,9 +22,9 @@
                     document.cookie = name + "="+ value + ";expires=" + oDate;
                 }
             }
-		},
-		get: function(name) {
-			var localStorage = window.localStorage;
+        },
+        get: function(name) {
+            var localStorage = window.localStorage;
             if(localStorage){
                 return localStorage[name];
             }else{
@@ -36,17 +36,18 @@
                     }
                 }
             }
-		},
-		remove: function(name) {
-			var localStorage = window.localStorage;
+        },
+        remove: function(name) {
+            var localStorage = window.localStorage;
             if(localStorage){
                 localStorage.removeItem(name);
             }else{
                 this.set(name, 1, -1);
             }
-		}
-	}
+        }
+    }
 
-	window.storage = storage;
+    window.storage = storage;
 
 })()
+
