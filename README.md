@@ -14,15 +14,15 @@
 - 设置数据
 
 ```javascript
-storage.set('key1', 'val1');
+storage.set(key1, val1);
 ```
 
 当然你也可以传入对象，进行多个键值对设置：
 
 ```javascript
 storage.set({
-	key1: 'val1',
-	key2: 'val2'
+	key1: val1,
+	key2: val2
 });
 ```
 
